@@ -440,7 +440,8 @@ def process_and_concatenate(data: dict[str, dict[str, list[str]]], output_dir: s
     files_created = 0
     files_skipped = 0
     tsv_lines: list[str] = []
-    
+    tsv_lines.append("file_path\ttarget")
+
     if mode == 'repeat':
         # Original repeat mode
         for digit_label in sorted(data.keys()):
